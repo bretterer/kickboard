@@ -4,12 +4,12 @@
 For this task, we ask you to program a simple case of a key concept from Kickboard: report card creation.
 
 ## Task Goal: ##
-- Create a set of permanent report cards (one per student) for the students and courses provided in the sample code. 
-- Report cards should include a numeric and letter grade for each subject (Math 95% A, for example) 
-- Report cards should also include an overall GPA score for the marking period. 
---- To calculate overall GPA, find the average of the GPA values for a student's letter grades. 
---- As designated in the code, "A" = 4.0, "B" = 3.0 etc. 
---- This means if a student was enrolled in two courses, Math and Social Studies, and earned an A and B respectively, their GPA would be 3.5 for the marking period.
+*  Create a set of permanent report cards (one per student) for the students and courses provided in the sample code. 
+*  Report cards should include a numeric and letter grade for each subject (Math 95% A, for example) 
+*  Report cards should also include an overall GPA score for the marking period. 
+   *  To calculate overall GPA, find the average of the GPA values for a student's letter grades. 
+   *  As designated in the code, "A" = 4.0, "B" = 3.0 etc. 
+   *  This means if a student was enrolled in two courses, Math and Social Studies, and earned an A and B respectively, their GPA would be 3.5 for the marking period.
 
 
 ### Requirements: ###
