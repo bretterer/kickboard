@@ -34,7 +34,7 @@ $studentThree->id = 3;
 $studentFour = new Student();
 $studentFour->id = 4;
 
-// SUBJECTS
+// SUBJECTS (Courses)
 $math = new Subject();
 $math->id = 1;
 $math->name = 'Math';

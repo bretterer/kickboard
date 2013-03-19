@@ -16,8 +16,9 @@ For this task, we ask you to program a simple case of a key concept from Kickboa
 1.  Once the report cards have been created, the architecture must prevent modification to report cards scores if individual assignment scores change.
 2.  A privileged user (i.e. principal, guidance counselor) must be able to override/change the final report card grades manually, while preserving the original
 calculated values. 
-3.  Additionally, the solution must allow two kinds of report card calculation: 1) all subject scores are used in the final GPA or 2) only
-'core academic' subjects are included in the final GPA. (Elective courses such as Art or Band for example, may not be included in the GPA at the user's discretion)
+3.  Additionally, the solution must allow two kinds of report card calculation: 
+	1)  all subject scores are used in the final GPA or 
+	2)  only 'core academic' subjects are included in the final GPA. (Elective courses such as Art or Band for example, may not be included in the GPA at the user's discretion)
 
 ### Assumptions: ###
 *  All scores are for a single marking period and belong on the report card. 
