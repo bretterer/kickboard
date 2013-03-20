@@ -4,6 +4,7 @@ class ReportCard {
 
 	private $studentId; 
 	private $studentName;
+	private $cardIsLocked = false;
 	private $currentSubjectId; // The subject we are currently talking about.
 	private $subjects = array();
 	private $gradeScale;
@@ -29,8 +30,12 @@ class ReportCard {
 			self::calculateGpa();
 
 		}
+		$this->lockCard();
 		return $this;
 		
+	}
+	private function lockCard() {
+		$this->cardIsLocked = true;
 	}
 
 	public function setCoreOnlyFlag() {
@@ -38,6 +43,9 @@ class ReportCard {
 	}
 
 	public function addSubjects(Collection $subjectCollection) {
+		if($this->cardIsLocked === true) {
+			throw new Exception('The report card is locked.   No modifications can be made');
+		}
 		
 		foreach($subjectCollection->getObjects() as $subject) {
 
@@ -54,6 +62,9 @@ class ReportCard {
 	}
 
 	public function addStudentAssignments(Array $assignments) {
+		if($this->cardIsLocked === true) {
+			throw new Exception('The report card is locked.   No modifications can be made');
+		}
 		foreach($assignments as $assignment) {
 			self::setAssignmentData($assignment);
 		}
@@ -96,7 +107,7 @@ class ReportCard {
 		
 
 		foreach($gradeScale as $scale) {
-			
+
 			if($scale['maxNumeric'] >= $grade && $scale['minNumeric'] <= $grade) {
 				$this->subjects[$this->currentSubjectId]['letterScore'] = strtoupper($scale['letterGrade']);
 				if($this->coreOnlyFlag === false || $this->coreOnlyFlag === true && $this->subjects[$this->currentSubjectId]['isCore'] == true) {
